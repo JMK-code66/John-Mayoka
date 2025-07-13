@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - John Mayoka</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .reviews-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .reviews-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .reviews-header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .reviews-header p {
+            color: var(--text-light);
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .review-card {
+            background: var(--background);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .review-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .review-quote {
+            position: absolute;
+            top: -1rem;
+            right: 2rem;
+            font-size: 4rem;
+            color: var(--primary-light);
+            opacity: 0.1;
+            line-height: 1;
+        }
+
+        .review-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .review-text {
+            color: var(--text-color);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .author-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .author-info h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 0.25rem;
+        }
+
+        .author-info p {
+            color: var(--text-light);
+            font-size: 0.875rem;
+        }
+
+        .review-rating {
+            color: var(--accent-color);
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 4rem;
+            background: var(--accent-bg);
+            border-radius: var(--border-radius);
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: var(--primary-light);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .reviews-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .reviews-header p {
+                font-size: 1.125rem;
+            }
+
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .review-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo">John Mayoka</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="reviews.html" class="active">Reviews</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="hero">
+        <section class="reviews-section">
+            <div class="reviews-header">
+                <h1>Client Reviews <span class="emoji">⭐</span></h1>
+                <p>Here's what some of my amazing clients have to say about working with me <span class="emoji">💬</span></p>
+            </div>
+
+            <div class="reviews-grid">
+                <article class="review-card">
+                    <div class="review-quote">❝</div>
+                    <div class="review-content">
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"John is an exceptional developer who consistently delivers high-quality work. His attention to detail and problem-solving skills are impressive. He transformed our ideas into a beautiful, functional website that exceeded our expectations."</p>
+                        <div class="review-author">
+                            <div class="author-avatar">
+                                <img src="images/avatar.svg" alt="Sarah Johnson">
+                            </div>
+                            <div class="author-info">
+                                <h3>Sarah Johnson</h3>
+                                <p>CEO, TechStart</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="review-card">
+                    <div class="review-quote">❝</div>
+                    <div class="review-content">
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Working with John was a pleasure. He's not just a developer but a true problem solver who brings creative solutions to the table. His communication skills and project management are top-notch."</p>
+                        <div class="review-author">
+                            <div class="author-avatar">
+                                <img src="images/avatar.svg" alt="Michael Chen">
+                            </div>
+                            <div class="author-info">
+                                <h3>Michael Chen</h3>
+                                <p>Product Manager, InnovateCo</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="review-card">
+                    <div class="review-quote">❝</div>
+                    <div class="review-content">
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"John's expertise in modern web technologies helped us create a stunning e-commerce platform. His dedication to quality and user experience is evident in every feature he develops."</p>
+                        <div class="review-author">
+                            <div class="author-avatar">
+                                <img src="images/avatar.svg" alt="Emily Rodriguez">
+                            </div>
+                            <div class="author-info">
+                                <h3>Emily Rodriguez</h3>
+                                <p>Founder, StyleHub</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="cta-section">
+                <h2>Share Your Experience <span class="emoji">✨</span></h2>
+                <p>Have we worked together? I'd love to hear about your experience and add your story to this wall of amazing feedback!</p>
+                <a href="contact.html" class="cta-button">Leave a Review <span class="emoji">📝</span></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 John Mayoka. All rights reserved.</p>
+    </footer>
+</body>
+</html>

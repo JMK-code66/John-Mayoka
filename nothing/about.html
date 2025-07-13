@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - John Mayoka</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .about-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .about-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .about-header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .about-header p {
+            color: var(--text-light);
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .about-image {
+            position: sticky;
+            top: 100px;
+        }
+
+        .about-text {
+            color: var(--text-color);
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+
+        .experience-section {
+            margin-top: 3rem;
+        }
+
+        .experience-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .experience-card {
+            background: var(--background);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .experience-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .experience-company {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        .experience-date {
+            color: var(--text-light);
+            font-size: 0.875rem;
+        }
+
+        .experience-description {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .skills-section {
+            margin-top: 3rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-card {
+            background: var(--background);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .skill-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .skill-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .skill-description {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .about-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-header p {
+                font-size: 1.125rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-image {
+                position: static;
+                text-align: center;
+            }
+
+            .experience-header {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo">John Mayoka</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="hero">
+        <section class="about-section">
+            <div class="about-header">
+                <h1>About Me <span class="emoji">👨‍💻</span></h1>
+                <p>Passionate about creating innovative solutions and delivering exceptional user experiences <span class="emoji">✨</span></p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-image" style="text-align:center;">
+                    <img src="images/jm-logo.svg" alt="JM Logo" style="height:120px;">
+                </div>
+                <div class="about-text">
+                    <h2>My Journey <span class="emoji">🚀</span></h2>
+                    <p>With over 5 years of experience in full-stack development, I've had the privilege of working with diverse teams and technologies. My passion lies in creating intuitive, performant web applications that solve real-world problems.</p>
+                    <p>I believe in writing clean, maintainable code and staying up-to-date with the latest industry trends and best practices. My approach combines technical expertise with a deep understanding of user needs and business objectives.</p>
+
+                    <div class="experience-section">
+                        <h2>Experience <span class="emoji">💼</span></h2>
+                        <div class="experience-grid">
+                            <div class="experience-card">
+                                <div class="experience-header">
+                                    <div>
+                                        <h3 class="experience-title">Senior Full Stack Developer</h3>
+                                        <p class="experience-company">TechCorp Solutions</p>
+                                    </div>
+                                    <span class="experience-date">2021 - Present</span>
+                                </div>
+                                <p class="experience-description">Leading development of enterprise-level web applications, mentoring junior developers, and implementing best practices for code quality and team collaboration.</p>
+                            </div>
+
+                            <div class="experience-card">
+                                <div class="experience-header">
+                                    <div>
+                                        <h3 class="experience-title">Full Stack Developer</h3>
+                                        <p class="experience-company">InnovateX</p>
+                                    </div>
+                                    <span class="experience-date">2019 - 2021</span>
+                                </div>
+                                <p class="experience-description">Developed and maintained multiple client projects, implemented responsive designs, and optimized application performance.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-section">
+                        <h2>Skills & Expertise <span class="emoji">🛠️</span></h2>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <div class="skill-icon">⚛️</div>
+                                <h3 class="skill-title">Frontend Development</h3>
+                                <p class="skill-description">React, Vue.js, TypeScript, Modern CSS, Responsive Design, Web Performance</p>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skill-icon">🚀</div>
+                                <h3 class="skill-title">Backend Development</h3>
+                                <p class="skill-description">Node.js, Python, RESTful APIs, GraphQL, Database Design, Cloud Services</p>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skill-icon">🎨</div>
+                                <h3 class="skill-title">UI/UX Design</h3>
+                                <p class="skill-description">User Research, Wireframing, Prototyping, Design Systems, Accessibility</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 John Mayoka. All rights reserved.</p>
+    </footer>
+</body>
+</html>
