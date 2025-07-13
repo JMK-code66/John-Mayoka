@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - John Mayoka</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .projects-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .projects-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .projects-header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .projects-header p {
+            color: var(--text-light);
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .project-card {
+            background: var(--background);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-tag {
+            background: var(--accent-bg);
+            color: var(--primary-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 2rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .project-description {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            font-size: 0.875rem;
+            line-height: 1.6;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            font-size: 0.875rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .primary-link {
+            background: var(--primary-color);
+            color: var(--background);
+        }
+
+        .primary-link:hover {
+            background: var(--primary-light);
+        }
+
+        .secondary-link {
+            background: var(--accent-bg);
+            color: var(--primary-color);
+        }
+
+        .secondary-link:hover {
+            background: var(--background);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 4rem;
+            background: var(--accent-bg);
+            border-radius: var(--border-radius);
+            margin-top: 4rem;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: var(--primary-light);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .projects-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .projects-header p {
+                font-size: 1.125rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-image {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo">John Mayoka</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html" class="active">Projects</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="hero">
+        <section class="projects-section">
+            <div class="projects-header">
+                <h1>My Projects <span class="emoji">🚀</span></h1>
+                <p>Here are some of my favorite projects that showcase my skills and passion for creating amazing web experiences <span class="emoji">✨</span></p>
+            </div>
+
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="images/project-1.svg" alt="E-Commerce Platform">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">React.js</span>
+                            <span class="project-tag">Node.js</span>
+                            <span class="project-tag">MongoDB</span>
+                        </div>
+                        <h2 class="project-title">E-Commerce Platform <span class="emoji">🛍️</span></h2>
+                        <p class="project-description">A full-featured e-commerce platform with real-time inventory management, secure payments, and an intuitive admin dashboard.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link primary-link">Live Demo <span class="emoji">🔗</span></a>
+                            <a href="#" class="project-link secondary-link">Source Code <span class="emoji">💻</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="images/project-2.svg" alt="Task Management App">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">Vue.js</span>
+                            <span class="project-tag">Express</span>
+                            <span class="project-tag">PostgreSQL</span>
+                        </div>
+                        <h2 class="project-title">Task Management App <span class="emoji">📝</span></h2>
+                        <p class="project-description">A collaborative task management application with real-time updates, team chat, and project analytics.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link primary-link">Live Demo <span class="emoji">🔗</span></a>
+                            <a href="#" class="project-link secondary-link">Source Code <span class="emoji">💻</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="images/balled-project.svg" alt="BALLED Project">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">TypeScript</span>
+                            <span class="project-tag">Next.js</span>
+                            <span class="project-tag">Tailwind CSS</span>
+                        </div>
+                        <h2 class="project-title">AI Content Platform <span class="emoji">🤖</span></h2>
+                        <p class="project-description">An AI-powered content generation platform with advanced editing tools and SEO optimization features.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link primary-link">Live Demo <span class="emoji">🔗</span></a>
+                            <a href="#" class="project-link secondary-link">Source Code <span class="emoji">💻</span></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="cta-section">
+                <h2>Have a Project in Mind? <span class="emoji">💭</span></h2>
+                <p>I'm always excited to take on new challenges and create amazing digital experiences. Let's discuss your project and bring your ideas to life!</p>
+                <a href="contact.html" class="cta-button">Start a Project <span class="emoji">🚀</span></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 John Mayoka. All rights reserved.</p>
+    </footer>
+</body>
+</html>
